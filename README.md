@@ -26,6 +26,7 @@ from markupsafe import escape
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
     print(url_for('static', filename='icon.png'))
@@ -61,6 +62,9 @@ HTML テキストを自分で組み立てて出力した場合、エスケープ
 
 ```py
 from flask import render_template
+
+app = Flask(__name__)
+
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
